@@ -25,7 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             viewController
         ]
         
-        window?.rootViewController = TinyConsoleController(rootViewController: tabBarController)
+        let consoleController = TinyConsoleController(rootViewController: tabBarController)
+        
+        // Show a startup
+//        consoleController.consoleWindowMode = .expanded
+        
+        window?.rootViewController = consoleController
         window?.makeKeyAndVisible()
         
         return true
